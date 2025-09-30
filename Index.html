@@ -1,0 +1,121 @@
+<html>
+ <head>
+    <title>jualan</title>
+    <link rel="stylesheet" href="layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Condiment&display=swap" rel="stylesheet">
+ </head>
+
+<body>
+<body style="background: linear-gradient(to bottom, #f7cf1c 0%, #000 100%);">
+<center>
+  <nav>
+    <ul>
+     <li><a href="Index.html"><img src="foto/L1.png" width="50" alt="1,1"><br></a></li>
+     <li><a href="2.html">Profil</a></li>
+     <li><a href="#">Produk</a>
+    <ul>
+     <li><a href="3.html">Genshin</a></li>
+     <li><a href="4.html">HSR</a></li>
+     <li><a href="5.html">Valorant</a></li>
+     <li><a href="6.html">Masukan Produk</a></li>
+    </ul>
+    </li>
+      <li><a href="7.html">Mitra</a></li>
+      <li><a href="8.html">Pembayaran</a></li>
+      <li><a href="9.html">Ketentuan</a></li>
+      <li><a href="10.html">Kontak kami</a></li>
+    </nav>
+<div class="bg-judul-minihobi">
+  <h1 class="judul-minihobi">.::Mini Hobi::.</h1>
+</div>
+<div class="slider-container">
+  <div class="slider">
+    <img src="foto/02.jpeg" alt="slide1" class="slide active" width="600">
+    <img src="foto/o5.jpeg" alt="slide2" class="slide" width="600">
+    <img src="foto/o6.jpeg" alt="slide3" class="slide" width="600">
+    <img src="foto/o7.jpeg" alt="slide4" class="slide" width="600">
+    <img src="foto/o8.jpeg" alt="slide5" class="slide" width="600">
+    <button class="slider-btn left" onclick="prevSlide(event)">&#8592;</button>
+    <button class="slider-btn right" onclick="nextSlide(event)">&#8594;</button>
+  </div>
+</div>
+<style>
+.slider-container { position: relative; width: 600px; height: 340px; margin: 0 auto 16px auto; overflow: hidden; border-radius: 16px; }
+.slider { width: 100%; height: 100%; position: relative; }
+.slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s; object-fit: contain; background: #222; }
+.slide.active { opacity: 1; z-index: 2; }
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.slider-btn.left { left: 12px; }
+.slider-btn.right { right: 12px; }
+.slider-btn:hover { background: #f7cf1c; color: #222; }
+</style>
+</style>
+<script>
+let slideIdx = 0;
+const slides = document.querySelectorAll('.slide');
+let autoSlideInterval;
+
+function showSlide(idx) {
+  slides.forEach((img, i) => {
+    img.classList.toggle('active', i === idx);
+  });
+}
+
+function nextSlide(e) {
+  if (e) e.preventDefault();
+  slideIdx = (slideIdx + 1) % slides.length;
+  showSlide(slideIdx);
+  resetAutoSlide();
+}
+
+function prevSlide(e) {
+  if (e) e.preventDefault();
+  slideIdx = (slideIdx - 1 + slides.length) % slides.length;
+  showSlide(slideIdx);
+  resetAutoSlide();
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlide, 2500);
+}
+
+autoSlideInterval = setInterval(nextSlide, 2500);
+</script>
+<script>
+</script>
+</script></center>
+<hr>    
+
+
+
+
+
+<p style="color: white;">
+Selamat datang di tempat joki Dika,
+web ini digunakan untuk membantu kalian menyelesaikan kesulitan di dalam game
+</p>
+
+
+<p style="color: white;">Silahkan gunakan menu diatas untuk membuka halaman lain</p>
+
+<hr>
+
+<div style="color: white;">copyright &copy;2025 by Rzero</div>	
+</body>
+
+</html>

@@ -1,3 +1,26 @@
+/* Persegi panjang tumpul di belakang judul Mini Hobi */
+.bg-judul-minihobi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.85);
+        border-radius: 32px;
+        padding: 24px 64px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        margin: 40px auto 24px auto;
+        width: fit-content;
+}
+/* Style khusus untuk judul Mini Hobi */
+.judul-minihobi {
+            font-size: 3rem;
+            font-family: 'Condiment', cursive;
+            font-weight: bold;
+            color: #f7cf1c;
+            text-shadow: 0 0 10px #000, 0 0 20px #f7cf1c;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+}
   
        head {
             box-sizing: border-box;
@@ -14,56 +37,90 @@
             font-family: Arial, Helvetica, sans-serif;
         }
  nav {
-	background-color:#7c16c4; 
-	height:50px; 
-	line-height:50px; 
-	position:relative;
-	width:1310px;
-	margin:auto;
-	margin-top:5px;
+    background-color: #f7cf1c;
+    min-height: 70px;
+    line-height: 70px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    margin-top: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    border-radius: 16px;
+    border: 2px solid #e6b800;
 }
 
 nav ul {
-	list-style:none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    gap: 0;
 }
 nav ul li a {
-	float:left; 
-	width:175px; 
-	display:block; 
-	text-align:center; 
-	color:#FFF; 
-	text-decoration:none; 
-	text-transform:uppercase;
+    float:left;
+    width: 100%;
+    height: 70px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 24px;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 nav ul li a:hover {
-	background-color:#666; 
-	display:block;
+    background-color: #ffe066;
+    display: block;
+    font-weight: bold;
+    text-shadow: 0 0 8px #fff200, 0 0 16px #fff200;
+    color: #000;
 }
 
-nav ul li:hover ul {
-	display:block;
+nav ul li:hover ul 
+nav ul li:hover ul,
+nav ul li:focus-within ul {
+    display: block;
+    display: block;
 }
 nav ul ul {
-	display:none; 
-	list-style:none; 
-	position:absolute; 
-	background-color:#900;
-	left:300px; 
-	top:50px; 
-	width:190px;
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: rgb(116, 116, 116);
+    left: 500px;
+    top: 100%;
+    width: 175px;
+    transform: none;
+    z-index: 10;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 nav ul ul li a {
-	float:none; 
-	display:block; 
-	padding-left:30px; 
-	text-align:left; 
-	width:160px;
+    float: none;
+    display: block;
+    padding: 0 32px;
+    text-align: left;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: none;
+    transition: background 0.2s, color 0.2s;
 }
 
 nav ul ul li a:hover {
-	color:#990;
+    color: #222;
+    background: #ffe066;
+    font-weight: bold;
+    border-radius: 8px;
 }
        
         
@@ -99,10 +156,29 @@ nav ul ul li a:hover {
         /* Responsive layout - buat 2 kolom/kotak */
         @media (max-width: 600px) {
  
-            nav,
-            article {
-                width: 100%;
-                height: auto;
-            }
+    nav {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+        nav ul {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 8px;
+    }
+                nav ul li a {
+                    width: 100%;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    font-size: clamp(0.9rem, 4vw, 1.05rem);
+    }
+    nav ul ul {
+        left: 0;
+        width: 100%;
+    }
         }
    
