@@ -181,4 +181,81 @@ nav ul ul li a:hover {
         width: 100%;
     }
         }
-   
+
+/* Store account block */
+.store-accounts {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin: 18px auto;
+    padding: 12px;
+    max-width: 820px;
+}
+.store-card {
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-decoration: none;
+}
+.store-card img.icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #222;
+    padding: 6px;
+}
+.store-card .meta {
+    display: flex;
+    flex-direction: column;
+}
+.store-card .meta .name { font-weight: 700; }
+.store-card .meta .handle { font-size: 0.95rem; color: #ddd; }
+.store-card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.3); }
+
+/* Rules / Terms styling */
+.rules-panel {
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.04);
+    padding: 20px 20px;
+    border-radius: 12px;
+    border-left: 6px solid #f7cf1c;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.rules-panel h2 {
+    margin: 0 0 8px 0;
+    color: #f7cf1c;
+    font-family: 'Condiment', cursive;
+    font-size: 1.6rem;
+}
+.rules-panel p.rules-intro {
+    margin: 8px 0 12px 0;
+    color: #eee;
+}
+.rules-list {
+    list-style: decimal;
+    padding-left: 1.1rem;
+    margin: 0;
+}
+.rules-list li {
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: rgba(0,0,0,0.18);
+    border-radius: 8px;
+    line-height: 1.4;
+}
+.rules-list li strong { color: #fff200; }
+
+.rules-note {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
